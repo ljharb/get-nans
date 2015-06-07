@@ -19,6 +19,7 @@ Current known failures:
  - `io.js` (`v1.0` - `v2.2`)
  - Chrome (`v43` - `v45`, at least)
  - Firefox (`v38` - `v41`, at least)
+ - Internet Explorer (`v10`, `v11`)
 
 ## Example
 

@@ -1,7 +1,11 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var nans = [NaN];
 if (typeof Float64Array !== 'undefined' && typeof Int32Array !== 'undefined') {
-	var originalNaNs = [0 / 0, Infinity / Infinity];
+	var originalNaNs = [
+		0 / 0, // standard NaN
+		Infinity / Infinity, // v8 differentiable NaN
+		Math.pow(-1, 0.5) // IE 11 differentiable NaN
+	];
 	var nanInts = new Int32Array(new Float64Array(originalNaNs).buffer);
 	if (nanInts.length !== originalNaNs.length * 2) {
 		throw new RangeError('got wrong length on nanInts: ' + nanInts.length);

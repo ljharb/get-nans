@@ -1,6 +1,10 @@
 var nans = [NaN];
 if (typeof Float64Array !== 'undefined' && typeof Int32Array !== 'undefined') {
-	var originalNaNs = [0 / 0, Infinity / Infinity];
+	var originalNaNs = [
+		0 / 0, // standard NaN
+		Infinity / Infinity, // v8 differentiable NaN
+		Math.pow(-1, 0.5) // IE 11 differentiable NaN
+	];
 	var nanInts = new Int32Array(new Float64Array(originalNaNs).buffer);
 	if (nanInts.length !== originalNaNs.length * 2) {
 		throw new RangeError('got wrong length on nanInts: ' + nanInts.length);
