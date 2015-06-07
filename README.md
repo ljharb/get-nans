@@ -30,6 +30,12 @@ var nans = getNaNs();
 assert.deepEqual(nans, [NaN]);
 ```
 
+## Relevant links
+ - https://esdiscuss.org/topic/observability-of-nan-distinctions-is-this-a-concern
+ - https://bugs.webkit.org/show_bug.cgi?id=53598
+ - https://code.google.com/p/v8/issues/detail?id=1101
+ - https://people.mozilla.org/~jorendorff/es6-draft.html#sec-ecmascript-language-types-number-type - see "Note"
+
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
 
