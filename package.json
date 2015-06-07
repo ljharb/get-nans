@@ -1,6 +1,6 @@
 {
 	"name": "get-nans",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"author": "Jordan Harband",
 	"description": "Get an array of all distinct NaN values supported by the engine. There can be only one!",
 	"license": "MIT",
