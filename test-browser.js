@@ -5920,7 +5920,7 @@ test('returns NaN', function (t) {
 	}
 
 	t.test('returns only one NaN', function (st) {
-		st.equal(1, nans.length, 'there can be only one');
+		st.equal(nans.length, 1, 'there can be only one');
 		st.end();
 	});
 	t.end();

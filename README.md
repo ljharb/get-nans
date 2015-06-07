@@ -18,6 +18,7 @@ Current known failures:
  - `node` (`v0.6` - `v0.12`)
  - `io.js` (`v1.0` - `v2.2`)
  - Chrome (`v43` - `v45`, at least)
+ - Firefox (`v38` - `v41`, at least)
 
 ## Example
 
