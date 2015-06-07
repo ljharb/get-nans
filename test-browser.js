@@ -3,8 +3,17 @@ var nans = [NaN];
 if (typeof Float64Array !== 'undefined' && typeof Int32Array !== 'undefined') {
 	var originalNaNs = [0 / 0, Infinity / Infinity];
 	var nanInts = new Int32Array(new Float64Array(originalNaNs).buffer);
-	if (nanInts.length !== 4 || nanInts[0] !== nanInts[2] || nanInts[1] !== nanInts[3]) {
-		nans = originalNaNs;
+	if (nanInts.length !== originalNaNs.length * 2) {
+		throw new RangeError('got wrong length on nanInts: ' + nanInts.length);
+	}
+	var map = {};
+	for (var i = 0; i < nanInts.length; i += 2) {
+		var key = nanInts[i] + '|' + nanInts[i + 1];
+		map[key] = originalNaNs[i / 2];
+	}
+	var nanKeys = Object.keys(map);
+	if (nanKeys.length !== 1) {
+		nans = nanKeys.map(function (nanKey) { return map[nanKey]; });
 	}
 }
 if (Object.freeze) {
