@@ -1,0 +1,60 @@
+{
+	"name": "get-nans",
+	"version": "0.0.0",
+	"author": "Jordan Harband",
+	"description": "Get an array of all distinct NaN values supported by the engine. There can be only one!",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm run lint && node test.js && npm run security",
+		"test-browser": "browserify test.js > test-browser.js && open test.html",
+		"lint": "npm run jscs && npm run eslint",
+		"jscs": "jscs test.js index.js",
+		"eslint": "eslint test.js index.js",
+		"security": "nsp package"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ljharb/get-nans.git"
+	},
+	"keywords": [
+		"NaN",
+		"qNaN",
+		"sNaN",
+		"quiet NaN",
+		"signalling NaN",
+		"typed arrays",
+		"v8",
+		"canonical"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"tape": "^4.0.0",
+		"jscs": "^1.13.1",
+		"nsp": "^1.0.1",
+		"eslint": "^0.22.1",
+		"browserify": "^10.2.4",
+		"semver": "^4.3.6"
+	},
+	"testling": {
+		"files": "test.js",
+		"browsers": [
+			"iexplore/6.0..latest",
+			"firefox/3.0..6.0",
+			"firefox/15.0..latest",
+			"firefox/nightly",
+			"chrome/4.0..10.0",
+			"chrome/20.0..latest",
+			"chrome/canary",
+			"opera/10.0..latest",
+			"opera/next",
+			"safari/4.0..latest",
+			"ipad/6.0..latest",
+			"iphone/6.0..latest",
+			"android-browser/4.2"
+		]
+	},
+	"engines": {
+		"node": ">= 0.4"
+	}
+}
