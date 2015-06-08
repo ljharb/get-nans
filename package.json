@@ -7,7 +7,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "npm run lint && node test.js && npm run security",
-		"test-browser": "browserify test.js > test-browser.js && open test.html",
+		"build": "browserify test.js > test-browser.js",
+		"test-browser": "npm run build && open test.html",
 		"lint": "npm run jscs && npm run eslint",
 		"jscs": "jscs test.js index.js",
 		"eslint": "eslint test.js index.js",
