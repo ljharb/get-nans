@@ -36,6 +36,7 @@ assert.deepEqual(nans, [NaN]);
  - https://bugs.webkit.org/show_bug.cgi?id=53598
  - https://code.google.com/p/v8/issues/detail?id=1101
  - https://people.mozilla.org/~jorendorff/es6-draft.html#sec-ecmascript-language-types-number-type - see "Note"
+ - https://bugs.ecmascript.org/show_bug.cgi?id=3508
 
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
