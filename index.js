@@ -1,3 +1,5 @@
+'use strict';
+
 var nans = [NaN];
 if (typeof Float64Array !== 'undefined' && typeof Int32Array !== 'undefined') {
 	var originalNaNs = [

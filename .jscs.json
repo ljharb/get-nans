@@ -96,7 +96,7 @@
 	"requirePaddingNewLinesBeforeExport": true,
 
 	"validateNewlineAfterArrayElements": {
-		"maximum": 3
+		"maximum": 1
 	},
 
 	"requirePaddingNewLinesAfterUseStrict": true
