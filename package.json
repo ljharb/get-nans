@@ -30,7 +30,7 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
-		"tape": "^4.0.1",
+		"tape": "^4.0.2",
 		"jscs": "^2.0.0",
 		"nsp": "^1.0.3",
 		"eslint": "^1.0.0",
