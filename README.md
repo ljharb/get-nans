@@ -42,7 +42,7 @@ assert.deepEqual(nans, [NaN]);
 Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/get-nans
-[2]: http://vb.teelaun.ch/ljharb/get-nans.svg
+[2]: http://versionbadg.es/ljharb/get-nans.svg
 [3]: https://travis-ci.org/ljharb/get-nans.svg
 [4]: https://travis-ci.org/ljharb/get-nans
 [5]: https://david-dm.org/ljharb/get-nans.svg
