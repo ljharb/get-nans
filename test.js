@@ -21,4 +21,3 @@ test('returns NaN', function (t) {
 	});
 	t.end();
 });
-
