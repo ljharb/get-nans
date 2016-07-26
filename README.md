@@ -14,12 +14,15 @@ JavaScript should only have one distinguishable `NaN` value. However, some engin
 
 This module returns an array of all the `NaN`s it knows how to detect on the current engine.
 
+Current engines with only one observable `NaN` value:
+ - Edge v14
+
 Current known failures:
- - `node` (`v0.6` - `v0.12`)
- - `io.js` (`v1.0` - `v2.2`)
- - Chrome (`v43` - `v45`, at least)
- - Firefox (`v38` - `v41`, at least)
- - Internet Explorer (`v10`, `v11`)
+ - `node` (`v0.6` - `v0.12`, `v4.0` - `v6.3.1`)
+ - `io.js` (all versions)
+ - Chrome (`v43` - `v52`, at least)
+ - Firefox (`v38` - `v47`, at least)
+ - Internet Explorer (`v10` - `v11`)
 
 ## Example
 
