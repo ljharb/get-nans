@@ -6,11 +6,14 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm run lint && node test.js && npm run security",
+		"pretest": "npm run lint",
+		"tests-only": "node test",
+		"test": "npm run tests-only",
+		"posttest": "npx aud",
 		"build": "browserify test.js > test-browser.js",
-		"test-browser": "npm run build && open test.html",
-		"lint": "eslint .",
-		"security": "nsp package"
+		"pretest-browser": "npm run build",
+		"test-browser": "open test.html",
+		"lint": "eslint ."
 	},
 	"repository": {
 		"type": "git",
@@ -29,7 +32,6 @@
 	"dependencies": {},
 	"devDependencies": {
 		"tape": "^4.6.0",
-		"nsp": "^2.6.1",
 		"eslint": "^3.1.1",
 		"@ljharb/eslint-config": "^6.0.0",
 		"browserify": "^13.1.0",
