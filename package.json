@@ -31,12 +31,12 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
-		"tape": "^4.6.0",
-		"eslint": "^3.1.1",
-		"@ljharb/eslint-config": "^6.0.0",
-		"browserify": "^13.1.0",
-		"semver": "^5.3.0",
-		"isarray": "^1.0.0"
+		"@ljharb/eslint-config": "^14.1.0",
+		"browserify": "^13.3.0",
+		"eslint": "^6.5.1",
+		"isarray": "^1.0.0",
+		"semver": "^6.3.0",
+		"tape": "^4.11.0"
 	},
 	"testling": {
 		"files": "test.js",

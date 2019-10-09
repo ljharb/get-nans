@@ -1,5 +1,7 @@
 'use strict';
 
+/* globals Float64Array, Int32Array */
+
 var nans = [NaN];
 if (typeof Float64Array !== 'undefined' && typeof Int32Array !== 'undefined') {
 	var originalNaNs = [
@@ -19,7 +21,9 @@ if (typeof Float64Array !== 'undefined' && typeof Int32Array !== 'undefined') {
 	}
 	var nanKeys = Object.keys(map);
 	if (nanKeys.length !== 1) {
-		nans = nanKeys.map(function (nanKey) { return map[nanKey]; });
+		nans = nanKeys.map(function (nanKey) {
+			return map[nanKey];
+		});
 	}
 }
 if (Object.freeze) {
