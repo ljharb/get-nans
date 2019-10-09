@@ -9,9 +9,7 @@
 		"test": "npm run lint && node test.js && npm run security",
 		"build": "browserify test.js > test-browser.js",
 		"test-browser": "npm run build && open test.html",
-		"lint": "npm run jscs && npm run eslint",
-		"jscs": "jscs test.js index.js",
-		"eslint": "eslint test.js index.js",
+		"lint": "eslint .",
 		"security": "nsp package"
 	},
 	"repository": {
@@ -31,7 +29,6 @@
 	"dependencies": {},
 	"devDependencies": {
 		"tape": "^4.6.0",
-		"jscs": "^3.0.7",
 		"nsp": "^2.6.1",
 		"eslint": "^3.1.1",
 		"@ljharb/eslint-config": "^6.0.0",
