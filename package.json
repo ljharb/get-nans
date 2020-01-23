@@ -2,6 +2,9 @@
 	"name": "get-nans",
 	"version": "1.1.1",
 	"author": "Jordan Harband",
+	"funding": {
+		"url": "https://github.com/sponsors/ljharb"
+	},
 	"description": "Get an array of all distinct NaN values supported by the engine. There can be only one!",
 	"license": "MIT",
 	"main": "index.js",
