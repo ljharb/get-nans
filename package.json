@@ -13,7 +13,9 @@
 		"build": "browserify test.js > test-browser.js",
 		"pretest-browser": "npm run build",
 		"test-browser": "open test.html",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
 	"repository": {
 		"type": "git",
@@ -32,6 +34,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^14.1.0",
+		"auto-changelog": "^1.16.2",
 		"browserify": "^13.3.0",
 		"eslint": "^6.5.1",
 		"isarray": "^1.0.0",
@@ -58,5 +61,12 @@
 	},
 	"engines": {
 		"node": ">= 0.4"
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
+		"commitLimit": false,
+		"backfillLimit": false
 	}
 }
