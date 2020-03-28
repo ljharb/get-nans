@@ -13,7 +13,7 @@
 		"pretest": "npm run lint",
 		"tests-only": "node test",
 		"test": "npm run tests-only",
-		"posttest": "npx aud",
+		"posttest": "npx aud --production",
 		"build": "browserify test.js > test-browser.js",
 		"pretest-browser": "npm run build",
 		"test-browser": "open test.html",
@@ -41,6 +41,7 @@
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^16.0.0",
+		"aud": "^1.1.0",
 		"auto-changelog": "^1.16.3",
 		"browserify": "^13.3.0",
 		"eslint": "^6.8.0",
