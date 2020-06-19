@@ -40,15 +40,15 @@
 		"string.prototype.padstart": "^3.1.0"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^16.0.0",
-		"aud": "^1.1.1",
-		"auto-changelog": "^2.0.0",
+		"@ljharb/eslint-config": "^17.1.0",
+		"aud": "^1.1.2",
+		"auto-changelog": "^2.1.0",
 		"browserify": "^13.3.0",
-		"eslint": "^6.8.0",
+		"eslint": "^7.3.0",
 		"isarray": "^2.0.5",
 		"object-keys": "^1.1.1",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.0.0-next.5"
+		"tape": "^5.0.1"
 	},
 	"testling": {
 		"files": "test.js",
